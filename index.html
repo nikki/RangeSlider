@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>rangeSlider - a lightweight range slider plugin for jQuery</title>
+	<style type="text/css" media="screen">
+		/* page css (not used for slider) */
+		body { font: 14px/24px 'Helvetica Neue', Arial, sans-serif; color: #333; width: 960px; margin: 30px auto 60px; background: #eee }
+		h1 { text-align: center; margin-bottom: 20px; text-shadow: 1px 1px 0 white }
+		h2 { margin: 30px 0 15px; text-shadow: 1px 1px 0 white; border-bottom: 2px solid #333; padding-bottom: 5px }
+		p { text-align: center; margin-bottom: 100px }
+		#wrap { width: 900px; margin: 100px auto 0 }	
+		/* end page css */
+	
+		/* slider css */
+		#slider { position: relative; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; background: black;
+			background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(29,29,29)), color-stop(1, rgb(40,40,40))); 
+			background: -moz-linear-gradient(center bottom, rgb(29,29,29) 0%, rgb(40,40,40) 100%) }
+		#slider a { position: absolute; top: 0; cursor: default; outline: 0; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px;
+			background: #777; 
+			background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(111,113,120)), color-stop(1, rgb(145,147,152))); 
+			background: -moz-linear-gradient(center bottom, rgb(111,113,120) 0%, rgb(145,147,152) 100%) }
+		#slider #jqrs-left, .slider #jqrs-right { text-decoration: none }
+		/* end slider css */
+	</style>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-17442910-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body>
+	
+	<div id="wrap">
+		<h1>jQuery rangeSlider - a lightweight range slider plugin for jQuery</h1>
+		<p>A work in progress.  Currently only snaps to increments. <br />Get rangeSlider from <a href="https://github.com/nikki/rangeSlider">Github</a></p>
+
+		<div id="slider"></div><!-- this div is all the markup you need -->	
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="rangeslider.jquery.js"></script>
+	<script>
+		$('#slider').rangeSlider();
+		//	console.log($('#slider').data('step'))
+	</script>
+	
+</body>
+</html>
